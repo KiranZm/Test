@@ -1,0 +1,53 @@
+{
+    "release_message" : "",
+    "project_info" : {
+        "vendor" : "mediatek",
+        "chip" : "r82x",
+        // TODO: change carbon-tv to damon
+        "bitbq_platform": "carbon-tv",
+        "build_type" : "FirmwareActive_Main_2_DslMainDSLUbiquity"
+    },
+    "snapshot_info" : {
+        "source_branch" : "main",
+        "internal_project" : "mtk_internal_ubiquity",
+        "internal_branch" : "main",
+        "project_port_branch" : "main",
+        "porting_kit_dir" : "port/<[project_info][vendor]>/<[project_info][chip]>/common",
+        "persist_wdk" : "False",
+        "wdk_dir" : "port/<[project_info][vendor]>/<[project_info][chip]>/common",
+        "external_project" : "none",
+        "ubiquity_external_remote" : "none",
+        "external_branch" : "none",
+        "enable_release_notes" : "True",
+        "enable_make_support" : "True"
+    },
+    "submodule_config" : {
+        // submodules to be included in the snapshot for Make support:
+        // [repo_name, submodule_name, rule_config_file, enable_update]
+        "make_submodules" : [
+            ["wlan-amlogic", "port/wlan/amlogic", "port/wlan_amlogic", "ENABLED"],
+            ["port_internal_assets", "port/internal/assets", "port/internal_assets", "ENABLED"],
+            ["port_internal_plugins", "port/internal/plugins", "port/internal_plugins", "ENABLED"]
+        ],
+        // submodules that are included in snapshot for both Make and meta build support
+        // meta build submodules will be located in sources directory, so we'll need to make config file changes eventually
+        "meta_build_submodules" : [
+            ["os", "os", "os_<[project_info][vendor]>", "ENABLED"],
+            ["custom_pkg", "custom_pkg", "custom_pkg", "ENABLED"],
+            ["toolchain", "toolchain", "toolchain", "ENABLED"],
+            ["mfg-apps", "mfg_apps", "mfg_apps", "ENABLED"],
+            ["wlan-common", "port/wlan/common", "port/wlan_common", "ENABLED"],
+            ["wlan-mediatek", "port/wlan/mediatek", "port/wlan_mediatek", "ENABLED"], 
+            ["wlan-realtek", "port/wlan/realtek", "port/wlan_realtek", "ENABLED"],
+            ["wlan-amlogic", "port/wlan/amlogic", "port/wlan_amlogic", "ENABLED"],
+            ["bazel-compile-commands-extractor", "bazel_compile_commands_extractor", "bazel_compile_commands_extractor", "ENABLED"],
+            ["bazel-skylib", "bazel_skylib", "bazel_skylib", "ENABLED"],
+            ["rules_python", "bazel_rules_python", "rules_python", "ENABLED"],
+            ["sasreceiverframework", "SASReceiverFramework", "sasreceiver_f", "ENABLED"],
+            ["plat_port_tools", "plat_port_tools", "plat_port_tools", "ENABLED"],
+            ["translation", "translation", "translation", "ENABLED"]
+        ],
+        "firmware_include_subs" : ["port/generic"],
+        "ubiquity_repo_sub" : ["packages"]
+    }
+}

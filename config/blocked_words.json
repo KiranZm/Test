@@ -1,0 +1,12 @@
+{
+    "oem_names" :["tcl", "bbk", "hitachi", "hisense", "changhong", "insignia", "magnavox", "funai", "philips", "diamond",
+                 "westinghouse", "philco", "vestel", "sanyo", "jvc", "mtc", "semp", "sharp", "infocus", "cnc", "rsr",
+                 "aoc", "ktc", "hkc", "rca", "cvte", "tpv", "onn"],
+    "vendor_names":["rtk", "realtek", "mtk", "mediatek", "aml", "amlogic", "mstar", "broadcom", "bcm"],
+    "skip_file_extensions":[".req", ".csr", ".css", ".tgz", ".xz", ".webp", ".bz2", ".gz", ".ts", ".pem", ".key", 
+                          ".gpg", ".pdf", ".xls", ".xlsx", ".zip", ".docx", ".jpg", ".xml", ".so", ".woff", ".zip",
+                          ".js", ".svg", ".pkcs8", ".crt", ".pkcs5v15", ".txt", ".gitmodules"],
+    "skip_dir_names":[".gitmodules", "mediatek_oemcrypto_r816", "mediatek_oemcrypto", "realtek", "amlogic", "mediatek", "dist",
+                     ".git", "wlan","playready4tee_mediatek", "playready4tee_realtek", "playready4tee_amlogic", "playready4tee",
+                     "3rdParty/R2D2/src/hybrid/mstar", "3rdParty/stubs/include/drm"]
+}
